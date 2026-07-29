@@ -52,32 +52,62 @@
 
 //     return 0;
 // }
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int rows, cols;
+//     cin >> rows >> cols;
+
+//     int arr[100][100];
+
+//     // Input
+//     for (int i = 0; i < rows; i++) {
+//         for (int j = 0; j < cols; j++) {
+//             cin >> arr[i][j];
+//         }
+//     }
+
+//     // Row-wise Sum
+//     for (int i = 0; i < rows; i++) {
+//         int sum = 0;
+
+//         for (int j = 0; j < cols; j++) {
+//             sum += arr[i][j];
+//         }
+
+//         cout << "Sum of Row " << i + 1 << " = " << sum << endl;
+//     }
+
+//     return 0;
+// }
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
+
 using namespace std;
 
 int main() {
-    int rows, cols;
-    cin >> rows >> cols;
+    srand(time(0));              // Seed for random number
+    int randomNum = rand() % 100 + 1; // Random number between 1 and 100
+    int guess;
 
-    int arr[100][100];
+    cout << "=== Random Number Guessing Game ===\n";
+    cout << "Guess a number between 1 and 100\n";
 
-    // Input
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
-            cin >> arr[i][j];
+    do {
+        cout << "Enter your guess: ";
+        cin >> guess;
+
+        if (guess > randomNum) {
+            cout << "Too High!\n";
+        } else if (guess < randomNum) {
+            cout << "Too Low!\n";
+        } else {
+            cout << "🎉 Correct! You guessed the number.\n";
         }
-    }
 
-    // Row-wise Sum
-    for (int i = 0; i < rows; i++) {
-        int sum = 0;
-
-        for (int j = 0; j < cols; j++) {
-            sum += arr[i][j];
-        }
-
-        cout << "Sum of Row " << i + 1 << " = " << sum << endl;
-    }
+    } while (guess != randomNum);
 
     return 0;
 }
