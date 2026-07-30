@@ -111,6 +111,8 @@
 
 //     return 0;
 // }
+// #include <iostream>
+// #
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -120,82 +122,33 @@ using namespace std;
 int main() {
     srand(time(0));
 
-    int choice, maxNum, attempts;
-
-    cout << "===== NUMBER GUESSING GAME =====\n";
-    cout << "1. Easy (1-50, 10 Attempts)\n";
-    cout << "2. Medium (1-100, 7 Attempts)\n";
-    cout << "3. Hard (1-500, 10 Attempts)\n";
-    cout << "Choose Difficulty: ";
-    cin >> choice;
-
-    switch(choice){
-        case 1:
-            maxNum = 50;
-            attempts = 10;
-            break;
-        case 2:
-            maxNum = 100;
-            attempts = 7;
-            break;
-        case 3:
-            maxNum = 500;
-            attempts = 10;
-            break;
-        default:
-            cout << "Invalid Choice!";
-            return 0;
-    }
-
-    int secret = rand() % maxNum + 1;
+    int secretNumber = rand() % 100 + 1;
     int guess;
-    bool win = false;
+    int attempts = 0;
 
-    while(attempts > 0){
+    cout << "=============================\n";
+    cout << "   NUMBER GUESSING GAME\n";
+    cout << "=============================\n";
+    cout << "Guess a number between 1 and 100.\n\n";
 
-        cout << "\nAttempts Left: " << attempts << endl;
-        cout << "Enter Guess: ";
+    do {
+        cout << "Enter your guess: ";
         cin >> guess;
+        attempts++;
 
-        if(cin.fail()){
-            cin.clear();
-            cin.ignore(1000,'\n');
-            cout << "Enter a valid number!\n";
-            continue;
+        if (guess > secretNumber) {
+            cout << "Too High!\n\n";
+        }
+        else if (guess < secretNumber) {
+            cout << "Too Low!\n\n";
+        }
+        else {
+            cout << "\nCongratulations! 🎉\n";
+            cout << "You guessed the correct number.\n";
+            cout << "Attempts: " << attempts << endl;
         }
 
-        if(guess == secret){
-            win = true;
-            break;
-        }
-
-        int diff = abs(secret - guess);
-
-        if(guess > secret)
-            cout << "Too High\n";
-        else
-            cout << "Too Low\n";
-
-        if(diff <= 5)
-            cout << "🔥 Very Close!\n";
-        else if(diff <= 15)
-            cout << "🙂 Close.\n";
-        else
-            cout << "❄️ Far Away.\n";
-
-        attempts--;
-    }
-
-    if(win){
-        int score = attempts * 100;
-        cout << "\n🎉 Congratulations!\n";
-        cout << "You guessed the number: " << secret << endl;
-        cout << "Score: " << score << endl;
-    }
-    else{
-        cout << "\n💀 Game Over!\n";
-        cout << "Correct Number was: " << secret << endl;
-    }
+    } while (guess != secretNumber);
 
     return 0;
 }
