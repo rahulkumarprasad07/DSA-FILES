@@ -152,27 +152,80 @@
 
 //     return 0;
 // }
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// vector<int> twoSum(vector<int>& nums, int target) {
+//     for (int i = 0; i < nums.size(); i++) {
+//         for (int j = i + 1; j < nums.size(); j++) {
+//             if (nums[i] + nums[j] == target) {
+//                 return {i, j};
+//             }
+//         }
+//     }
+//     return {};
+// }
+
+// int main() {
+//     vector<int> nums = {2, 7, 11, 15};
+//     int target = 9;
+
+//     vector<int> ans = twoSum(nums, target);
+
+//     cout << "Indices: " << ans[0] << " " << ans[1];
+//     return 0;
+// }
 #include <iostream>
-#include <vector>
 using namespace std;
 
-vector<int> twoSum(vector<int>& nums, int target) {
-    for (int i = 0; i < nums.size(); i++) {
-        for (int j = i + 1; j < nums.size(); j++) {
-            if (nums[i] + nums[j] == target) {
-                return {i, j};
+int main() {
+    int arr[3][3];
+
+    int totalSum = 0;
+    int mainDiagonal = 0;
+    int secondaryDiagonal = 0;
+
+    // Input
+    cout << "Enter 9 elements:\n";
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            cin >> arr[i][j];
+        }
+    }
+
+    // Calculate sums
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+
+            // Total sum
+            totalSum += arr[i][j];
+
+            // Main diagonal
+            if (i == j) {
+                mainDiagonal += arr[i][j];
+            }
+
+            // Secondary diagonal
+            if (i + j == 2) {
+                secondaryDiagonal += arr[i][j];
             }
         }
     }
-    return {};
-}
 
-int main() {
-    vector<int> nums = {2, 7, 11, 15};
-    int target = 9;
+    cout << "Total Sum = " << totalSum << endl;
+    cout << "Main Diagonal Sum = " << mainDiagonal << endl;
+    cout << "Secondary Diagonal Sum = " << secondaryDiagonal << endl;
 
-    vector<int> ans = twoSum(nums, target);
+    if (mainDiagonal > secondaryDiagonal) {
+        cout << "Main Diagonal Wins";
+    }
+    else if (secondaryDiagonal > mainDiagonal) {
+        cout << "Secondary Diagonal Wins";
+    }
+    else {
+        cout << "Equal";
+    }
 
-    cout << "Indices: " << ans[0] << " " << ans[1];
     return 0;
 }
