@@ -82,6 +82,40 @@
 
 //     return 0;
 // }
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int n;
+//     cin >> n;
+
+//     int arr[n];
+
+//     // Input
+//     for (int i = 0; i < n; i++) {
+//         cin >> arr[i];
+//     }
+
+//     // Reverse
+//     int start = 0;
+//     int end = n - 1;
+
+//     while (start < end) {
+//         int temp = arr[start];
+//         arr[start] = arr[end];
+//         arr[end] = temp;
+
+//         start++;
+//         end--;
+//     }
+
+//     // Output
+//     for (int i = 0; i < n; i++) {
+//         cout << arr[i] << " ";
+//     }
+
+//     return 0;
+// }
 #include <iostream>
 using namespace std;
 
@@ -90,28 +124,30 @@ int main() {
     cin >> n;
 
     int arr[n];
+    bool visited[n] = {false};
 
-    // Input
     for (int i = 0; i < n; i++) {
         cin >> arr[i];
     }
 
-    // Reverse
-    int start = 0;
-    int end = n - 1;
-
-    while (start < end) {
-        int temp = arr[start];
-        arr[start] = arr[end];
-        arr[end] = temp;
-
-        start++;
-        end--;
-    }
-
-    // Output
     for (int i = 0; i < n; i++) {
-        cout << arr[i] << " ";
+
+        if (visited[i])
+            continue;
+
+        int count = 1;
+
+        for (int j = i + 1; j < n; j++) {
+            if (arr[i] == arr[j]) {
+                count++;
+                visited[j] = true;
+            }
+        }
+
+        cout << arr[i] << " -> " << count << " time";
+        if (count > 1)
+            cout << "s";
+        cout << endl;
     }
 
     return 0;
