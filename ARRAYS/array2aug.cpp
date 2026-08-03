@@ -44,41 +44,75 @@
 
 //     return 0;
 // }
+// #include <iostream>
+// #include <climits>
+// using namespace std;
+
+// int main() {
+//     int n;
+//     cout << "Enter size of array: ";
+//     cin >> n;
+
+//     int arr[n];
+
+//     cout << "Enter elements: ";
+//     for (int i = 0; i < n; i++) {
+//         cin >> arr[i];
+//     }
+
+//     int largest = INT_MIN;
+//     int secondLargest = INT_MIN;
+
+//     for (int i = 0; i < n; i++) {
+//         if (arr[i] > largest) {
+//             secondLargest = largest;
+//             largest = arr[i];
+//         }
+//         else if (arr[i] > secondLargest && arr[i] != largest) {
+//             secondLargest = arr[i];
+//         }
+//     }
+
+//     cout << "Largest = " << largest << endl;
+
+//     if (secondLargest == INT_MIN)
+//         cout << "Second Largest does not exist";
+//     else
+//         cout << "Second Largest = " << secondLargest;
+
+//     return 0;
+// }
 #include <iostream>
-#include <climits>
 using namespace std;
 
 int main() {
     int n;
-    cout << "Enter size of array: ";
     cin >> n;
 
     int arr[n];
 
-    cout << "Enter elements: ";
+    // Input
     for (int i = 0; i < n; i++) {
         cin >> arr[i];
     }
 
-    int largest = INT_MIN;
-    int secondLargest = INT_MIN;
+    // Reverse
+    int start = 0;
+    int end = n - 1;
 
-    for (int i = 0; i < n; i++) {
-        if (arr[i] > largest) {
-            secondLargest = largest;
-            largest = arr[i];
-        }
-        else if (arr[i] > secondLargest && arr[i] != largest) {
-            secondLargest = arr[i];
-        }
+    while (start < end) {
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+
+        start++;
+        end--;
     }
 
-    cout << "Largest = " << largest << endl;
-
-    if (secondLargest == INT_MIN)
-        cout << "Second Largest does not exist";
-    else
-        cout << "Second Largest = " << secondLargest;
+    // Output
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
 
     return 0;
 }
