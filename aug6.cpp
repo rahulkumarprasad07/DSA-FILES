@@ -159,50 +159,156 @@ using namespace std;
 
 
 // }
-const int cols=100;
-void sumCol(int arr[][cols],int row,int col){
+// const int cols=100;
+// void sumCol(int arr[][cols],int row,int col){
 
-int sum;
+// int sum;
 
-cout<<"enter values:"<<endl;
-for(int i=0;i<row;i++){
-    for(int j=0;j<col;j++){
-        cin>>arr[i][j];
+// cout<<"enter values:"<<endl;
+// for(int i=0;i<row;i++){
+//     for(int j=0;j<col;j++){
+//         cin>>arr[i][j];
       
-    }
-}
-//summ finding..........
-for(int i=0;i<col;i++){
-    //initializing sum to 0 for every row iteration
-     sum=0;
-    for(int j=0;j<row;j++){
+//     }
+// }
+// //summ finding..........
+// for(int i=0;i<col;i++){
+//     //initializing sum to 0 for every row iteration
+//      sum=0;
+//     for(int j=0;j<row;j++){
        
-      sum+=arr[j][i];
+//       sum+=arr[j][i];
       
+//     }
+//     cout<<"sum of col"<<i+1<<" is "<<sum<<endl;
+// }
+
+
+// }
+// int main(){
+// int test[3][cols];
+// sumCol(test,3,2);
+// // sumOfArray(test,2,3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//     return 0;
+// }
+// #include <iostream>
+// #include <climits>
+// using namespace std;
+
+
+// const int cols=100;
+// void maxSumRow(int arr[][cols],int row,int col){
+//     int rowNo;
+//     int maxRow;
+//     int sum=0;
+//     int maxSum=INT_MIN;
+//     cout<<"enter values: "<<endl;;
+//     for(int i=0;i<row;i++){
+//         for(int j=0;j<col;j++){
+//             cin>>arr[i][j];
+//         }
+//     }
+//     //rowwise summ........
+//     for(int i=0;i<row;i++){
+//         sum=0;
+//         rowNo=0;
+//         for (int j=0;j<col;j++){
+//             sum+=arr[i][j];
+//             rowNo=i+1;
+//         }
+//         if(sum>=maxSum){
+//             maxSum=sum;
+//             maxRow=rowNo;
+
+//         }
+//     }
+//     cout<<"max sum is: "<<maxSum<<endl;
+//     cout<<"row is: "<<maxRow<<endl;
+// }
+// int main(){
+// int test[3][cols];
+// maxSumRow(test,3,2);
+
+//     return 0;
+// }
+// #include <iostream>
+// #include <climits>
+// using namespace std;
+
+
+// const int cols=100;
+// void theSum(int arr[][cols],int row,int col){
+// int secSum=0;
+// int priSum=0;
+// int sum=0;
+//     cout<<"enter values: "<<endl;;
+//     for(int i=0;i<row;i++){
+//         for(int j=0;j<col;j++){
+//             cin>>arr[i][j];
+//             if(i==j){
+//                 priSum+=arr[i][j];
+//             }
+//           if(j==row-(i+1)){
+//             secSum+=arr[i][j];
+//           }
+//          sum=priSum+secSum-arr[row/2][col/2];
+//         }
+       
+//     }
+
+//   cout<<"the sum is: "<<sum<<endl;
+// }
+// int main(){
+// int test[4][cols];
+// theSum(test,4,4);
+
+//     return 0;
+// }
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+
+    int n;
+    cout << "Enter size: ";
+    cin >> n;
+
+    vector<vector<int>> arr(n, vector<int>(n));
+
+    cout << "Enter elements:\n";
+
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < n; j++) {
+            cin >> arr[i][j];
+        }
     }
-    cout<<"sum of col"<<i+1<<" is "<<sum<<endl;
-}
 
+    int primarySum = 0;
+    int secondarySum = 0;
 
-}
-int main(){
-int test[3][cols];
-sumCol(test,3,2);
-// sumOfArray(test,2,3);
+    for(int i = 0; i < n; i++) {
+        primarySum += arr[i][i];           // Primary diagonal
+        secondarySum += arr[i][n - 1 - i]; // Secondary diagonal
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    cout << "Primary Diagonal Sum: " << primarySum << endl;
+    cout << "Secondary Diagonal Sum: " << secondarySum << endl;
 
     return 0;
 }
