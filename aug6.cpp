@@ -312,53 +312,61 @@ using namespace std;
 
 //     return 0;
 // }
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+
+//     int n;
+//     cout << "Enter size: ";
+//     cin >> n;
+
+//     vector<vector<int>> arr(n, vector<int>(n));
+
+//     cout << "Enter elements:\n";
+
+//     for (int i = 0; i < n; i++) {
+//         for (int j = 0; j < n; j++) {
+//             cin >> arr[i][j];
+//         }
+//     }
+
+//     int primarySum = 0;
+//     int secondarySum = 0;
+//     int remainingSum = 0;
+
+//     for (int i = 0; i < n; i++) {
+//         for (int j = 0; j < n; j++) {
+
+//             if (i == j) {
+//                 primarySum += arr[i][j];
+//             }
+
+//             else if (i + j == n - 1) {
+//                 secondarySum += arr[i][j];
+//             }
+
+//             else {
+//                 remainingSum += arr[i][j];
+//             }
+//         }
+//     }
+
+//     int difference = primarySum - secondarySum;
+
+//     cout << "Primary Diagonal Sum: " << primarySum << endl;
+//     cout << "Secondary Diagonal Sum: " << secondarySum << endl;
+//     cout << "Difference: " << difference << endl;
+//     cout << "Remaining Elements Sum: " << remainingSum << endl;
+
+//     return 0;
+// }
 #include <iostream>
 #include <vector>
 using namespace std;
 
 int main() {
-
-    int n;
-    cout << "Enter size: ";
-    cin >> n;
-
-    vector<vector<int>> arr(n, vector<int>(n));
-
-    cout << "Enter elements:\n";
-
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            cin >> arr[i][j];
-        }
-    }
-
-    int primarySum = 0;
-    int secondarySum = 0;
-    int remainingSum = 0;
-
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-
-            if (i == j) {
-                primarySum += arr[i][j];
-            }
-
-            else if (i + j == n - 1) {
-                secondarySum += arr[i][j];
-            }
-
-            else {
-                remainingSum += arr[i][j];
-            }
-        }
-    }
-
-    int difference = primarySum - secondarySum;
-
-    cout << "Primary Diagonal Sum: " << primarySum << endl;
-    cout << "Secondary Diagonal Sum: " << secondarySum << endl;
-    cout << "Difference: " << difference << endl;
-    cout << "Remaining Elements Sum: " << remainingSum << endl;
-
+    cout<<"hello"<<endl;
     return 0;
 }
