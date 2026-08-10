@@ -394,6 +394,79 @@ using namespace std;
 //     cout<<"hello"<<endl;
 //     return 0;
 //}git 
+//  #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     cout<<"hello"<<endl;
+//     return 0;
+// }
+//  #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     cout<<"hello"<<endl;
+//     return 0;
+// } #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     cout<<"hello"<<endl;
+//     return 0;
+// } #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     cout<<"hello"<<endl;
+//     return 0;
+// } #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     cout<<"hello"<<endl;
+//     return 0;
+// } #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     cout<<"hello"<<endl;
+//     return 0;
+// }
+//  #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     cout<<"hello"<<endl;
+//     return 0;
+// } #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     cout<<"hello"<<endl;
+//     return 0;
+// } #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     cout<<"hello"<<endl;
+//     return 0;
+// } #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     cout<<"hello"<<endl;
+//     return 0;
+// }
  #include <iostream>
 #include <vector>
 using namespace std;
