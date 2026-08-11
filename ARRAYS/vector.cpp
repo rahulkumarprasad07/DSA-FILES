@@ -165,8 +165,8 @@ using namespace std;
 // }
 
 
-//Matrix mein even aur odd elements count karo.
-void oddEven(vector<vector<int>>&arr){
+//Matrix ka transpose karo(square matrix).
+void trasnsposeMatrix(vector<vector<int>>&arr){
     int row=arr.size();
    
 
@@ -180,12 +180,28 @@ void oddEven(vector<vector<int>>&arr){
         }
          
     }
-
+vector<vector<int>>transpose=arr;
+int transposeRows=transpose.size();
+for(int i=0;i<transposeRows;i++){
+    for(int j=0;j<transpose[i].size();j++){
+        if(i<=j){
+            transpose[i][j]=transpose[j][i];
+        }
+    }
 }
+cout<<"trasnspose matrix: "<<endl;
+for(int i=0;i<transposeRows;i++){
+    for(int j=0;j<transpose[i].size();j++){
+       cout<<transpose[i][j]<<" ";
+    }
+    cout<<endl;
+}
+}
+
 
 int main(){
     vector<vector<int>>test(3,vector<int>(3));
-oddEven(test);
+trasnsposeMatrix(test);
 
 
 
