@@ -18,27 +18,66 @@ using namespace std;
 //     cout<<endl;
 //    }
 //  }
-void netSum(vector<vector<int>>&arr){
-    int row=arr.size();
+// void netSum(vector<vector<int>>&arr){
+//     int row=arr.size();
 
-    cout<<"input values:";
+//     cout<<"input values:";
+//     for(int i=0;i<row;i++){
+//                 int sum=0;
+//         for(int j=0;j<arr[i].size();j++){
+//                 cin>>arr[i][j];
+//                 sum+=arr[i][j];
+               
+//         }
+//          cout<<"the sum of row "<<i+1<<" is "<<sum<<endl;
+//          cout<<"enter"<< i+1<<" row:"<<endl;
+//     }
+    
+
+// }
+void colSum(vector<vector<int>>&arr){
+    int row=arr.size();
+    int sum=0;
+
+    cout<<"input values:"<<endl;
     for(int i=0;i<row;i++){
-                int sum=0;
+                
         for(int j=0;j<arr[i].size();j++){
                 cin>>arr[i][j];
-                sum+=arr[i][j];
+                
                
         }
-         cout<<"the sum of row "<<i+1<<" is "<<sum<<endl;
-         cout<<"enter"<< i+1<<" row:"<<endl;
+         
     }
-    
+    vector<vector<int>>transpose=arr;
+    int theRows=transpose.size();
+    for(int i=0;i<theRows;i++){
+        for(int j=0;j<transpose[i].size();j++){
+  if(i<=j){
+    transpose[i][j]=transpose[j][i];
+  }
+        }
+    }
+    for(int i=0;i<theRows;i++){
+        for(int j=0;j<transpose[0].size();j++){
+            cout<<transpose[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+
+    for(int i=0;i<theRows;i++){
+        sum=0;
+        for(int j=0;j<transpose[i].size();j++){
+         sum+=transpose[i][j];
+        }
+        cout<<"sum of col"<<i+1<<" is "<<sum<<endl;
+    }
 
 }
 
 int main(){
     vector<vector<int>>test(3,vector<int>(3));
-    netSum(test);
+ colSum(test);
 
 
 
