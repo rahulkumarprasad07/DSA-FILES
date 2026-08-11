@@ -75,46 +75,64 @@ using namespace std;
 //     }
 
 // }
+// void maxMin(vector<vector<int>>&arr){
+//     int row=arr.size();
+//     int max=INT_MIN;
+//     int min=INT_MAX;
+
+//     cout<<"input values:"<<endl;
+//     for(int i=0;i<row;i++){
+                
+//         for(int j=0;j<arr[i].size();j++){
+//                 cin>>arr[i][j];
+               
+                
+               
+//         }
+         
+//     }
+//     //max value
+//        for(int i=0;i<row;i++){
+                
+//         for(int j=0;j<arr[i].size();j++){
+//                 if(arr[i][j]>=max){
+//                     max=arr[i][j];
+//                 }
+               
+//         }
+         
+//     }
+//     //min value
+//        for(int i=0;i<row;i++){
+                
+//         for(int j=0;j<arr[i].size();j++){
+//               if(arr[i][j]<=min){
+//                 min=arr[i][j];
+//               }
+               
+//         }
+         
+//     }
+//     cout<<"max value is: "<<max<<endl;
+//     cout<<"min value is: "<<min<<endl;
+// }
 void maxMin(vector<vector<int>>&arr){
     int row=arr.size();
-    int max=INT_MIN;
-    int min=INT_MAX;
+int sum=0;
 
     cout<<"input values:"<<endl;
     for(int i=0;i<row;i++){
                 
         for(int j=0;j<arr[i].size();j++){
                 cin>>arr[i][j];
-               
-                
-               
-        }
-         
-    }
-    //max value
-       for(int i=0;i<row;i++){
-                
-        for(int j=0;j<arr[i].size();j++){
-                if(arr[i][j]>=max){
-                    max=arr[i][j];
+                if(i==j){
+                    sum+=arr[i][j];
                 }
-               
+              
         }
          
     }
-    //min value
-       for(int i=0;i<row;i++){
-                
-        for(int j=0;j<arr[i].size();j++){
-              if(arr[i][j]<=min){
-                min=arr[i][j];
-              }
-               
-        }
-         
-    }
-    cout<<"max value is: "<<max<<endl;
-    cout<<"min value is: "<<min<<endl;
+    cout<<"sum is:"<<sum<<endl;
 }
 
 int main(){
