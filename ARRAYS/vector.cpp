@@ -116,28 +116,76 @@ using namespace std;
 //     cout<<"max value is: "<<max<<endl;
 //     cout<<"min value is: "<<min<<endl;
 // }
-void maxMin(vector<vector<int>>&arr){
+// void maxMin(vector<vector<int>>&arr){
+//     int row=arr.size();
+// int sum=0;
+
+//     cout<<"input values:"<<endl;
+//     for(int i=0;i<row;i++){
+                
+//         for(int j=0;j<arr[i].size();j++){
+//                 cin>>arr[i][j];
+//                 if(i==j){
+//                     sum+=arr[i][j];
+//                 }
+              
+//         }
+         
+//     }
+//     cout<<"sum is:"<<sum<<endl;
+// }
+
+//Ab secondary diagonal ka sum nikal.
+// void secSum(vector<vector<int>>&arr){
+//     int row=arr.size();
+// int sum=0;
+
+//     cout<<"input values:"<<endl;
+//     for(int i=0;i<row;i++){
+                
+//         for(int j=0;j<arr[i].size();j++){
+//                 cin>>arr[i][j];
+//                 if(j==row-(i+1)){
+//                     sum+=arr[i][j];
+//                 }
+              
+//         }
+         
+//     }
+//     cout<<"sum is : "<<sum<<endl;
+// }
+
+// int main(){
+//     vector<vector<int>>test(3,vector<int>(3));
+// secSum(test);
+
+
+
+//     return 0;
+// }
+
+
+//Matrix mein even aur odd elements count karo.
+void oddEven(vector<vector<int>>&arr){
     int row=arr.size();
-int sum=0;
+   
+
 
     cout<<"input values:"<<endl;
     for(int i=0;i<row;i++){
                 
         for(int j=0;j<arr[i].size();j++){
                 cin>>arr[i][j];
-                if(i==j){
-                    sum+=arr[i][j];
-                }
-              
+            
         }
          
     }
-    cout<<"sum is:"<<sum<<endl;
+
 }
 
 int main(){
     vector<vector<int>>test(3,vector<int>(3));
- maxMin(test);
+oddEven(test);
 
 
 
