@@ -20,8 +20,11 @@ void sum(vector<vector<int>>matrix){
         }
         cout<<endl;
     }
-    
-}
+   int top=0;
+   int bottom=matrix.size()-1;
+   int left=0;
+   int right=matrix[0].size()-1;
+
 int main(){
   vector<vector<int>>test(3,vector<int>(2));
   sum(test);
