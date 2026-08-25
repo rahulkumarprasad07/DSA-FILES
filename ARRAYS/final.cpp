@@ -58,17 +58,39 @@
 //     return 0;
 // }
 //searching algorithm
-#include <iostream>
+// #include <iostream>
+// #include<vector>
+// #include<algorithm>
+// using namespace std;
+// int main(){
+//     vector<int>arr={33,33,72,29,77,33,35};
+//  int target=33;
+//     sort(arr.begin(),arr.end());
+
+//   auto p=equal_range(arr.begin(),arr.end(),target);
+//   cout<<(p.first-arr.begin())<<endl;
+//   cout<<(p.second-arr.begin())<<endl;
+// return 0;
+// }
+
+//min and max
 #include<vector>
+#include<iostream>
 #include<algorithm>
 using namespace std;
 int main(){
-    vector<int>arr={33,33,72,29,77,33,35};
- int target=33;
-    sort(arr.begin(),arr.end());
 
-  auto p=equal_range(arr.begin(),arr.end(),target);
-  cout<<(p.first-arr.begin())<<endl;
-  cout<<(p.second-arr.begin())<<endl;
-return 0;
+vector<int>he={3,4,43,21,456,32};
+vector<int>she={3,4,456,45,32};
+sort(he.begin(),he.end());
+sort(she.begin(),she.end());
+vector<int>result;
+set_symmetric_difference(he.begin(),he.end(),she.begin(),she.end(),inserter(result,result.begin()));
+for(int a:result){
+    cout<<a<<" ";
+}
+
+
+
+    return 0;
 }
