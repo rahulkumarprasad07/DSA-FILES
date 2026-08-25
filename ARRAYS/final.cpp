@@ -36,3 +36,24 @@
 
 //     return 0;
 // }
+
+//numeric algorithm
+#include<vector>
+#include<iostream>
+#include<algorithm>
+#include<numeric>
+using namespace std;
+int main(){
+    vector<int>arr(3);
+    // vector<int>brr={0,4,6,3,5};
+//  int product=inner_product(arr.begin(),arr.end(),brr.begin(),0);in
+// vector<int>right(arr.size());
+// partial_sum(arr.begin(),arr.end(),right.begin());
+// for(int a:right)
+// cout<<a<< " " ;
+iota(arr.begin(),arr.end(),3);
+for(int a:arr)
+cout<<a<<" ";
+
+    return 0;
+}
