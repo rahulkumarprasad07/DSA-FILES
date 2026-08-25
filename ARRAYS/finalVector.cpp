@@ -99,61 +99,92 @@
 //     return 0;
 // }
 
+// #include <iostream>
+// #include<vector>
+// using namespace std;
+// void nintyDegree(vector<vector<int>>&matrix){
+//     int row=matrix.size();
+//     int col=matrix[0].size();
+//     cout<<"enter inputs:"<<endl;
+//     for(int i=0;i<row;i++){
+//         for(int j=0;j<col;j++){
+//             cin>>matrix[i][j];
+//         }
+//     }
+//     cout<<"matrix:"<<endl;
+//         for(int i=0;i<row;i++){
+//         for(int j=0;j<col;j++){
+//             cout<<matrix[i][j]<<" ";
+//         }
+//         cout<<endl;
+//     }
+//    vector<vector<int>>ulta(col,vector<int>(row));
+//    for(int i=0;i<row;i++){
+//     for(int j=0;j<col;j++){
+//         ulta[j][i]=matrix[i][j];
+//     }
+//    }
+//    //printing Traanspose
+//    cout<<"transpose"<<endl;
+//    for(int i=0;i<col;i++){
+// for(int j=0;j<row;j++){
+//     cout<<ulta[i][j]<<" ";
+// }
+// cout<<endl;
+//    }
+//    //reversing
+// for(int i=0; i<col; i++){
+//     for(int j=0; j<row/2; j++){
+//         swap(ulta[i][j], ulta[i][row-1-j]);
+//     }
+// }
+// cout<<"reverse:"<<endl;
+//    for(int i=0;i<col;i++){
+// for(int j=0;j<row;j++){
+//     cout<<ulta[i][j]<<" ";
+// }
+// cout<<endl;
+//    }
+
+// }
+
+
+
+
+// int main(){
+//  vector<vector<int>>test(3,vector<int>(2));
+//  nintyDegree(test);
+//     return 0;
+// }
+
 #include <iostream>
-#include<vector>
+#include <vector>
+#include <algorithm>
+#include <numeric>
 using namespace std;
-void nintyDegree(vector<vector<int>>&matrix){
-    int row=matrix.size();
-    int col=matrix[0].size();
-    cout<<"enter inputs:"<<endl;
-    for(int i=0;i<row;i++){
-        for(int j=0;j<col;j++){
-            cin>>matrix[i][j];
-        }
-    }
-    cout<<"matrix:"<<endl;
-        for(int i=0;i<row;i++){
-        for(int j=0;j<col;j++){
-            cout<<matrix[i][j]<<" ";
-        }
-        cout<<endl;
-    }
-   vector<vector<int>>ulta(col,vector<int>(row));
-   for(int i=0;i<row;i++){
-    for(int j=0;j<col;j++){
-        ulta[j][i]=matrix[i][j];
-    }
-   }
-   //printing Traanspose
-   cout<<"transpose"<<endl;
-   for(int i=0;i<col;i++){
-for(int j=0;j<row;j++){
-    cout<<ulta[i][j]<<" ";
-}
-cout<<endl;
-   }
-   //reversing
-for(int i=0; i<col; i++){
-    for(int j=0; j<row/2; j++){
-        swap(ulta[i][j], ulta[i][row-1-j]);
-    }
-}
-cout<<"reverse:"<<endl;
-   for(int i=0;i<col;i++){
-for(int j=0;j<row;j++){
-    cout<<ulta[i][j]<<" ";
-}
-cout<<endl;
-   }
-
-}
-
-
-
-
 int main(){
- vector<vector<int>>test(3,vector<int>(2));
- nintyDegree(test);
+
+vector<int>arr={10,20,30,40,50,60};
+// vector<int>brr={60,50,40,30,20,10};
+// int product=inner_product(arr.begin(),arr.end(),brr.begin(),0);
+// cout<<"total sum:"<<product;
+// vector<int>ans(arr .size());
+// partial_sum(arr.begin(),arr.end(),ans.begin());
+// for(int i:ans)
+// cout<<i<<" ";
+vector<int>fill(5);
+iota(fill.begin(),fill.end(),20);
+for(int i:fill)
+cout<<i<<" ";
+
+
+
+
+
+
+
+
+
+
     return 0;
 }
-
