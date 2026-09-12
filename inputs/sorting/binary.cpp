@@ -102,34 +102,46 @@
    
    
 // }
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//      vector<int>test={1,2,3,4,55,33,22,11,1};
+//      int n=test.size();
+//      int s=0;
+//      int e=n-1;
+//      int target=55;
+//      int ans=-1;
+//      while(s<=e){
+//         int mid=s+(e-s)/2;
+//         if(target==test[mid]){
+//             ans=mid;
+//             e=mid-1;
+//         }else if(target<test[mid]){
+//             e=mid-1;
+
+//         }else{
+//             s=mid+1;
+//         }
+//      }
+//      if(ans==-1){
+//         cout<<"not found"<<endl;
+//         return 0;
+//      }
+//     else{
+//         cout<<ans<<endl;
+//     }
+
+//     return 0;
+// }
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-     vector<int>test={1,2,3,4,55,33,22,11,1};
-     int n=test.size();
-     int s=0;
-     int e=n-1;
-     int target=55;
-     int ans=-1;
-     while(s<=e){
-        int mid=s+(e-s)/2;
-        if(target==test[mid]){
-            ans=mid;
-            e=mid-1;
-        }else if(target<test[mid]){
-            e=mid-1;
+    vector<int>test={1,22,37,43,32,20,1};
+      int n=test.size();
+   s=1;
+   e=n-2;
+   while(s<=e){
+    
+   }
 
-        }else{
-            s=mid+1;
-        }
-     }
-     if(ans==-1){
-        cout<<"not found"<<endl;
-        return 0;
-     }
-    else{
-        cout<<ans<<endl;
-    }
-
-    return 0;
 }
