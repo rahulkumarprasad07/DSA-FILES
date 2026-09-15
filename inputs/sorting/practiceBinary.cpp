@@ -102,3 +102,24 @@
 //     cout<<noWords(p);
 //     return 0;
 // }
+// #include <bits/stdc++.h>
+// using namespace std;
+// int words(string &s){
+//       getline(cin,s);
+//         int n=s.length();
+//         int count=0;
+  
+//     for(int i=0;i<n;i++){
+//       if(i==0 && s[i]!=' '){
+//       count++;
+//       }else if(i>0 && s[i-1]==' ' && s[i]!=' '){
+//         count++;
+//       }
+//     }
+//     return count;
+// }
+// int main() {
+//      string p;
+//      cout<<words(p);
+//     return 0;
+// }
