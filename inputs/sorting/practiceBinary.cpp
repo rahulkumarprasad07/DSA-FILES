@@ -123,3 +123,23 @@
 //      cout<<words(p);
 //     return 0;
 // }
+#include <bits/stdc++.h>
+using namespace std;
+void interChange(string &s){
+    getline(cin,s);
+    int n=s.length();
+    int st=0;
+    int e=n-1;
+while(st<=e){
+    swap(s[st],s[e]);
+    st++;
+    e--;
+}
+cout<<s;
+}
+int main() {
+    string p;
+    interChange(p);
+    
+    return 0;
+}
