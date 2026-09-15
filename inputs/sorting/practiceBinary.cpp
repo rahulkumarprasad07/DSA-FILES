@@ -27,35 +27,78 @@
 
 //     return 0;
 // }
-#include <bits/stdc++.h>
-using namespace std;
+// 
+// #include<bits/stdc++.h>
+// using namespace std;
+// void charCount(string &s){
+// getline(cin,s);
+// int freq[256]={0};
+// for(int i=0;i<s.length();i++){
+// freq[s[i]]++;
+// }
+// for(int i=0;i<256;i++){
+// if(freq[i]>0){
+//         cout<<char(i)<<"="<<freq[i]<<"\n";
+// }
+// }
 
-void countChar(string s) {
 
-    getline(cin, s);
+// }
+// int main(){
+//  string p;
+//  charCount(p);
 
-    int freq[256] = {0};
 
-    for(int i = 0; i < s.length(); i++) {
+//     return 0;
+// }
+// #include <bits/stdc++.h>
+// using namespace std;
+//     char maxOccur(string &s){
+//         getline(cin,s);
+//         int n=s.length();
+//         for(int i=0;i<n;i++){
+//             if(s[i]>='A' && s[i]<='Z'){
+//                 s[i]=s[i]-'A'+'a';
+//             }
+//         }
+//         int freq[256]={0};
+//         for(int i=0;i<n;i++){
+//             freq[s[i]]++;
 
-        if(s[i] != ' ') {
-            freq[s[i]]++;
-        }
-    }
+//         }
+     
+//         char most;
+//      int maxFreq=0;
+//      for(int i=0;i<n;i++){
+//         if(freq[s[i]]>maxFreq){
+//             maxFreq=freq[s[i]];
+//             most=s[i];
+//         }
+//      }
+//      return most;
+//     }
 
-    for(int i = 0; i < 256; i++) {
+// int main() {
+//  string p;
+// cout << maxOccur(p);
+//     return 0;
+// }
+// #include <bits/stdc++.h>
+// using namespace std;
+// int noWords(string &s){
+//     getline(cin,s);
+//     int n=s.length();
+//     int count=1;
+//     for(int i=0;i<n;i++){
+//      if(s[i]==' '){
+//       count++;
+//      }
+//     }
+//     return count;
+// }
 
-        if(freq[i] > 0) {
-            cout << char(i) << " = " << freq[i] << endl;
-        }
-    }
-}
-
-int main() {
-
-    string s;
-
-    countChar(s);
-
-    return 0;
-}
+// int main() {
+//     string p;
+//     cout<<noWords(p);
+//     return 0;
+// }
